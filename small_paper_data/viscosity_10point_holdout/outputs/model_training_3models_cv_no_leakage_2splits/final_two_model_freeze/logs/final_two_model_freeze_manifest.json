@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-07-25T19:14:37",
+  "run_code_version": "17_final_two_model_tuning_and_freeze_v1_20260725",
+  "status": "final_two_model_freeze_completed",
+  "formal_selection": {
+    "final_application_model": "LightGBM",
+    "formal_selection_source": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\formal_outer_evaluation\\final_summary\\logs\\formal_outer_evaluation_final_manifest_Data_IL.json",
+    "formal_selection_source_sha256": "d71971360f6925232ea2cfa802ff32e0b446b2f3e7d90e88299480ff43ab759f",
+    "selection_changed_in_this_notebook": false,
+    "Data_split_and_IL_split_averaged": false
+  },
+  "final_parameter_selection": {
+    "design": "new_single_parameter_set_per_model_from_five_IL_split_development_folds",
+    "tuning_signature": "4659901e5ee2339803adb1263afe0a85ce53fed51b0e2539c7c18cf5adbee163",
+    "outer_fold_parameter_averaging_used": false,
+    "single_outer_fold_parameter_reused": false,
+    "external_10point_read": false
+  },
+  "final_training": {
+    "development_rows": 16216,
+    "feature_dim": 130,
+    "target": "lg_eta",
+    "global_MPNN_representation_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\representation_compare\\mpnn_features_eta.npy",
+    "global_MPNN_representation_sha256": "d4f474817c32c41e9ff20ff6377bff7a4aa45463ca218380968e445d6c31cdbc",
+    "MPNN_extractor_retrained_in_this_notebook": false,
+    "MPNN_external_10point_used_in_pretraining": false,
+    "downstream_scaler_fitted_on_all_development_rows": true,
+    "LightGBM_trained_on_all_development_rows": true,
+    "Transformer_trained_on_all_development_rows": true
+  },
+  "model_roles": [
+    {
+      "Model": "LightGBM",
+      "Model_label": "LGBM",
+      "Model_role": "final_application_model",
+      "Model_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\models\\final_LightGBM_viscosity.joblib",
+      "Model_sha256": "29d4cbcefa0896225f413ac397cb85cf807185a74b4340d0f9da6f86b69abb1b",
+      "Parameter_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\parameters\\final_parameters_LightGBM.json",
+      "Parameter_sha256": "2c14323e0366a7fb44c11bcd608fa052c050a9b42c92df9fc5c1f0afeb2f431e",
+      "Scaler_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\scalers\\final_downstream_feature_scaler.joblib",
+      "Scaler_sha256": "b51e21e80c03f71f3749a0aad3d1c0b2cf11b2e87fd3323971e90f689887ecb4",
+      "Use_for_external_10point_supplementary_validation": true,
+      "Use_for_virtual_IL_viscosity_prediction": true,
+      "May_be_reselected_by_external_10point": false
+    },
+    {
+      "Model": "Transformer",
+      "Model_label": "Transformer",
+      "Model_role": "supplementary_control_model",
+      "Model_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\models\\final_Transformer_viscosity.pt",
+      "Model_sha256": "6e03e4dd0e5b9342a1a776770e76abee252cea4261f56b23e7a7dfcdbf91ad70",
+      "Parameter_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\parameters\\final_parameters_Transformer.json",
+      "Parameter_sha256": "61e0c27549d20a71b72d820ab0e5398c1c5cd1bf3d5315b8f447bba5accb0184",
+      "Scaler_path": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\scalers\\final_downstream_feature_scaler.joblib",
+      "Scaler_sha256": "b51e21e80c03f71f3749a0aad3d1c0b2cf11b2e87fd3323971e90f689887ecb4",
+      "Use_for_external_10point_supplementary_validation": true,
+      "Use_for_virtual_IL_viscosity_prediction": false,
+      "May_be_reselected_by_external_10point": false
+    }
+  ],
+  "usage_lock": {
+    "external_10point_role": "supplementary_validation_only",
+    "external_10point_may_change_final_model": false,
+    "virtual_IL_prediction_model": "LightGBM",
+    "Transformer_used_for_virtual_IL_prediction": false
+  },
+  "verification": {
+    "all_required_outputs_exist": true,
+    "final_scaler_reload_verified": true,
+    "final_LightGBM_reload_verified": true,
+    "final_Transformer_reload_verified": true,
+    "external_10point_file_read": false,
+    "formal_outer_metrics_recomputed_or_replaced": false,
+    "figure_catalog_created": false,
+    "table_catalog_created": false
+  },
+  "outputs": {
+    "model_registry": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\results\\final_two_model_registry.csv",
+    "output_check": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\logs\\final_two_model_output_check.csv",
+    "freeze_manifest": "D:\\jupyter\\IL_ML_Project\\small_paper_data\\viscosity_10point_holdout\\outputs\\model_training_3models_cv_no_leakage_2splits\\final_two_model_freeze\\logs\\final_two_model_freeze_manifest.json"
+  }
+}
